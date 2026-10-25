@@ -1,0 +1,30 @@
+# Procedural Toy Universe
+
+An open-source, engine-agnostic experiment in modular construction, constrained procedural discovery, and playable toy worlds.
+
+## Vision
+Build with freely placed scenery, grid-aligned pieces, and compatible snap connectors—then save assemblies as reusable blueprints. Blueprints may expose selected connectors and nest inside larger blueprints. Worlds, vehicles, buildings, and interiors are generated progressively as players explore, with discoveries becoming persistent.
+
+The project is **not a Star Wars game**. Familiar science-fiction craft and locations are useful design examples, but the core and bundled assets must be original or properly licensed. Planet Coaster is a construction-workflow inspiration, not an asset source.
+
+## Principles
+- Physical geometry is authoritative: interiors must fit within their exterior hull or structure.
+- No mandatory universal grid. Grid snapping, named connectors, and free placement can coexist.
+- Blueprint interfaces explicitly expose compatible connectors; internal details can remain encapsulated.
+- Unexplored spaces remain unresolved until observed. Once committed, player discoveries and edits persist.
+- Procedural rules enforce spatial fit, connectivity, and established facts; failure is preferable to impossible geometry.
+- Visual scenery, construction semantics, and future gameplay behaviors remain separable.
+- Asset provenance and redistribution rights must be recorded before inclusion.
+- No destructibility requirement in the initial construction milestone.
+
+## Starting point
+Read [docs/VISION.md](docs/VISION.md), [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), and [docs/ROADMAP.md](docs/ROADMAP.md). First prototype: a small 3D modular room/corridor editor with snapping, connector exposure, saved blueprints, and deterministic constraint-aware assembly. Do not start with a full planet or spaceship.
+
+## Agent onboarding
+Read [AGENTS.md](AGENTS.md). Copilot can use the repository prompt `/initialize` from [`.github/prompts/initialize.prompt.md`](.github/prompts/initialize.prompt.md) where repository prompt files are supported. Codex should read `AGENTS.md` and may use the `initialize` skill under `.agents/skills/initialize/` where skills are supported. Both use the same instructions and project docs.
+
+## Status
+Concept / architecture exploration. No implementation stack chosen yet.
+
+## Licensing
+Code and original assets are **not yet licensed for redistribution** until an explicit LICENSE and asset-license policy are approved. Public visibility alone does not grant reuse rights. See [docs/ASSET_POLICY.md](docs/ASSET_POLICY.md).
