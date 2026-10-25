@@ -1,0 +1,17 @@
+# OS and editor artifacts
+.DS_Store
+Thumbs.db
+.vs/
+.vscode/*.log
+.idea/
+# Build outputs
+build/
+dist/
+out/
+.cache/
+__pycache__/
+*.pyc
+# Secrets and local settings
+.env
+.env.*
+!.env.example
