@@ -12,6 +12,14 @@ This is the durable record of consequential project decisions and the important 
 - **Context and rationale:** The user wants a persistent, prioritized question-and-answer ledger and a record of important conversations and their outcomes, maintained across agents and sessions. Durable tracked files plus always-on repository instructions are the chosen mechanism; full chat transcripts and routine exchanges are not needed.
 - **References:** User-approved discussion on 2026-10-26; [`AGENTS.md`](../AGENTS.md); [`AGENT_BOOTSTRAP.md`](AGENT_BOOTSTRAP.md).
 
+### D-002 — Organize learning demos as sandboxes with isolated checks and deliberate site deployment
+
+- **Date:** 2026-10-26
+- **Status:** Accepted
+- **Decision:** Call the independent small learning/demo directories `sandboxes/`. Run checks or builds for an individual sandbox on pushes that affect it. Keep publishing to GitHub Pages as a separate, deliberate action rather than deploying on every sandbox push. When multiple browser-based sandboxes are hosted together, assemble them into one Pages site artifact with each sandbox preserved under its own subdirectory and its own `index.html` entry point.
+- **Context and rationale:** The imported deployment workflow was specific to one Blazor WebGPU app and deployed on pushes. The user clarified that browser sandboxes will be local HTML static sites, each suited to a distinct subdirectory, and accepted separating per-sandbox validation from deliberate web publication. A shared Pages artifact avoids independent deploys overwriting one another.
+- **References:** User-approved workflow discussion on 2026-10-26; [current imported workflow](../.github/workflows/deploy-blazor-webgpu); [`OPEN_QUESTIONS.md`](OPEN_QUESTIONS.md).
+
 ## Updating this record
 
 - Give each consequential decision a stable `D-NNN` ID; do not reuse IDs.
