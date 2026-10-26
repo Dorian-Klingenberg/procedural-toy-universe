@@ -22,6 +22,7 @@ Priorities are relative and may change as the project evolves. An open question 
 | Q-005 | P2 | Open | How should blueprint bounds and hull occupancy be represented? | Architecture prototype question; must preserve the fixed-volume invariant. |
 | Q-006 | P2 | Open | How can future feasible configurations be guaranteed without prematurely resolving unexplored spaces? | Architecture prototype question; investigate while designing bounded generation. |
 | Q-007 | P3 | Open | How should simultaneous explorers avoid conflicting commits? | Architecture prototype question; multiplayer is a later possibility, so defer until scope requires it. |
+| Q-008 | P1 | Open | What explicit trigger or approval mechanism should initiate the separate GitHub Pages deployment? | D-002 establishes that deployment is separate and deliberate, but does not choose manual dispatch, an approval gate, or another trigger. Decide while adapting the publishing workflow. |
 
 ## Answered questions
 
