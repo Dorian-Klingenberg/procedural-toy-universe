@@ -1,49 +1,56 @@
 ---
-description: Rules for managing source files as the grass-field-003 learning project advances through its numbered steps.
-applyTo: 'projects/grannys-house-trials/subprojects/grass-field-003/**'
+description: Language- and toolchain-agnostic rules for preserving numbered steps in step-based learning projects.
+applyTo: 'projects/**'
 ---
 
-# grass-field-003 Step Progression Rules
+# Step-Based Learning Project Progression Rules
+
+## Scope
+
+Use these rules for any project under `projects/` that teaches or explores a topic through numbered steps, regardless of programming language, framework, or build system. Adapt the examples and artifact layout to the project's conventions.
 
 ## The rule
 
-Each step in the learning curriculum lives in its **own permanently preserved source file**.
+Preserve each completed step as a distinct, reproducible learning artifact so learners can compare it with later steps.
 
 When advancing from Step N to Step N+1:
-1. **Copy** the current `main.cpp` to `main_step{N}.cpp` — this locks in the completed lesson.
-2. **Create** a fresh `main_step{N+1}.cpp` (or rename the working file) as the new active file.
-3. **Never modify** a completed step file (`main_step1.cpp`, `main_step2.cpp`, …). They are read-only curriculum artifacts.
-4. Update `CMakeLists.txt` to compile the new active step file.
+1. **Preserve** the completed Step N implementation before changing it. Keep all source files and any step-specific configuration needed to understand, build, or run that step.
+2. **Create** the new active Step N+1 implementation using the project's established layout. This can mean copying the previous step forward or starting from a clean scaffold, depending on the lesson.
+3. **Do not silently rewrite** completed step artifacts. Treat them as read-only curriculum material. If a correction is necessary, make it explicit and document why the historical artifact changed.
+4. **Update** the relevant project, build, launch, or lesson configuration so it clearly identifies how to build or run the active step. Keep archived steps isolated when compiling all of them together would cause conflicts.
+5. **Update** the learning plan or equivalent documentation to mark Step N complete and describe what it taught.
 
 ## Why
 
-The numbered files serve as a diff-able textbook. A learner (or future agent) can open `main_step1.cpp` and `main_step2.cpp` side-by-side to see exactly what D3D12 initialization added on top of the bare Win32 window — without any "before" state being overwritten.
+Numbered steps form a diff-able textbook. Learners and future contributors should be able to compare consecutive steps and see what changed, while still being able to build or run each completed lesson when practical.
 
-## File naming convention
+## Artifact layout
 
-| File | Contents |
-|---|---|
-| `main_step1.cpp` | Step 1 completed — bare Win32 window (frozen) |
-| `main_step2.cpp` | Step 2 completed — D3D12 device + swap chain (frozen) |
-| `main_step{N}.cpp` | Step N completed (frozen) |
-| `main.cpp` | Current active working file (the step in progress) |
+Follow the conventions that best fit the project. For example, a single-file lesson might use numbered source files, while a multi-file application might keep each step in its own directory. Keep the active working version easy to identify.
 
-## CMakeLists.txt update pattern
+Illustrative layouts (not requirements):
 
-When advancing to Step N+1, change the source file listed in `add_executable`:
-
-```cmake
-add_executable(
-    grannys_house_trials_grass_field_003
-    WIN32
-        main_step{N+1}.cpp   # ← updated; previous step file left untouched
-)
+```text
+# Single-file lessons
+Program_step1.cs
+Program_step2.cs
+Program.cs                 # active step
 ```
+
+```text
+# Multi-file lessons
+step-1/                    # completed, preserved step
+step-2/                    # completed, preserved step
+current/                   # active step, if this convention suits the project
+```
+
+Use the project's existing naming and directory conventions rather than introducing a new pattern just to match these examples.
 
 ## Checklist when advancing a step
 
-- [ ] Copy `main.cpp` → `main_stepN.cpp` (do NOT delete or edit afterwards)
-- [ ] Start the new step in `main.cpp` (or a new `main_step{N+1}.cpp`)
-- [ ] Update `CMakeLists.txt` source file reference
-- [ ] Confirm the build is clean before writing new Step N+1 code
-- [ ] Update `PLAN.md` to mark Step N complete and note what was learned
+- [ ] Preserve the completed Step N source files and any step-specific files needed to understand or run them.
+- [ ] Start Step N+1 in the project's clearly identified active location.
+- [ ] Update build, project, launch, or lesson configuration as needed to select the active step and isolate archived steps.
+- [ ] Confirm the completed step remains understandable and, where practical, builds or runs as expected.
+- [ ] Verify the new step's starting point before adding its new lesson content.
+- [ ] Update the learning plan or equivalent documentation with the completed step and key takeaway.
