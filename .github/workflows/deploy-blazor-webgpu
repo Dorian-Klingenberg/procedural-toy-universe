@@ -1,4 +1,4 @@
-name: Deploy WebGPU Fluid Sandbox
+name: Deploy Blazor WebGPU
 
 on:
   push:
