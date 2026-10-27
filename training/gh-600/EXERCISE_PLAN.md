@@ -1,7 +1,7 @@
 # GH-600 repository exercise plan
 
-**Status:** Proposed learning plan  
-**Reviewed:** 2026-10-27  
+- **Status:** Proposed learning plan
+- **Reviewed:** 2026-10-27
 **Authoritative scope:** [Microsoft Learn study guide for Exam GH-600](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-600), which the live page reports was last updated 2026-05-13. Recheck it before starting a study cycle; Microsoft may revise the exam.
 
 ## Goal and boundaries
