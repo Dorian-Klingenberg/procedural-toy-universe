@@ -6,9 +6,9 @@ This hub links three related but distinct learning tracks. The current study pri
 
 | Track | Current focus | Local materials | Official guide |
 |---|---|---|---|
-| **GH-600 — first** | Agentic AI development practices in GitHub and the software development lifecycle. | [Study companion](gh-600/README.md), [repository readiness checklist](gh-600/REPOSITORY_READINESS.md), and [exercise plan](gh-600/EXERCISE_PLAN.md). | [Exam GH-600 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-600) |
-| **AI-103 — later** | Developing AI apps and agents on Azure. | [Study track](ai-103/README.md) and [readiness checklist](ai-103/READINESS_CHECKLIST.md). | [Exam AI-103 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103) |
-| **AI-500 — later** | Designing and implementing multi-agent AI solutions. | [Study track](ai-500/README.md) and [readiness checklist](ai-500/READINESS_CHECKLIST.md). | [Exam AI-500 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-500) |
+| **GH-600 — first** | Agentic AI development practices in GitHub and the software development lifecycle. | [Study companion](gh-600/README.md), [lessons learned](gh-600/LESSONS_LEARNED.md), [new-repository checklist](gh-600/NEW_REPOSITORY_CHECKLIST.md), [repository readiness checklist](gh-600/REPOSITORY_READINESS.md), and [exercise plan](gh-600/EXERCISE_PLAN.md). | [Exam GH-600 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-600) |
+| **AI-103 — later** | Developing AI apps and agents on Azure. | [Study track](ai-103/README.md), [lessons learned](ai-103/LESSONS_LEARNED.md), and [readiness checklist](ai-103/READINESS_CHECKLIST.md). | [Exam AI-103 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103) |
+| **AI-500 — later** | Designing and implementing multi-agent AI solutions. | [Study track](ai-500/README.md), [lessons learned](ai-500/LESSONS_LEARNED.md), and [readiness checklist](ai-500/READINESS_CHECKLIST.md). | [Exam AI-500 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-500) |
 
 ## Shared Responsible AI practice checklist
 

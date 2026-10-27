@@ -3,6 +3,7 @@
 - **Status:** Starter checklist; objective-by-objective mapping is not yet complete.
 - **Exam focus:** Designing and implementing multi-agent AI solutions.
 - **Authoritative source:** [Official AI-500 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-500). Recheck the live guide before each study cycle.
+- **Related study aid:** [AI-500 lessons learned](LESSONS_LEARNED.md).
 
 ## Preparation
 
