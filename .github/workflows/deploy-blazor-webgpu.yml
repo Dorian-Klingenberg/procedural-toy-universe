@@ -1,13 +1,6 @@
-name: Deploy Blazor WebGPU
+name: Publish modular apartment playground
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "projects/grannys-house-trials/webgpu-fluid-sandbox/**"
-      - "projects/grannys-house-trials/presentation/**"
-      - ".github/workflows/deploy-webgpu-fluid-sandbox.yml"
   workflow_dispatch:
 
 permissions:
@@ -35,24 +28,12 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Run simulation checks
-        if: ${{ !contains(github.event.head_commit.message, '[skip-simulation-checks]') }}
-        run: >
-          dotnet run
-          --project projects/grannys-house-trials/webgpu-fluid-sandbox/tests/FluidModelChecks/FluidModelChecks.csproj
-          --configuration Release
-
       - name: Publish application
         run: >
           dotnet publish
-          projects/grannys-house-trials/webgpu-fluid-sandbox/WebGpuFluidSandbox.csproj
+          sandboxes/modular-apartment-playground/ModularApartmentPlayground.csproj
           --configuration Release
           --output artifacts/publish
-
-      - name: Add presentation under its own path
-        run: |
-          mkdir -p artifacts/publish/wwwroot/presentation
-          cp -R projects/grannys-house-trials/presentation/. artifacts/publish/wwwroot/presentation/
 
       - name: Set site base path and routing fallback
         env:

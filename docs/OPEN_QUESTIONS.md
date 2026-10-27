@@ -22,13 +22,13 @@ Priorities are relative and may change as the project evolves. An open question 
 | Q-005 | P2 | Open | How should blueprint bounds and hull occupancy be represented? | Architecture prototype question; must preserve the fixed-volume invariant. |
 | Q-006 | P2 | Open | How can future feasible configurations be guaranteed without prematurely resolving unexplored spaces? | Architecture prototype question; investigate while designing bounded generation. |
 | Q-007 | P3 | Open | How should simultaneous explorers avoid conflicting commits? | Architecture prototype question; multiplayer is a later possibility, so defer until scope requires it. |
-| Q-008 | P1 | Open | What explicit trigger or approval mechanism should initiate the separate GitHub Pages deployment? | D-002 establishes that deployment is separate and deliberate, but does not choose manual dispatch, an approval gate, or another trigger. Decide while adapting the publishing workflow. |
+| Q-008 | P1 | Answered | What explicit trigger or approval mechanism should initiate the separate GitHub Pages deployment? | Use a manual `workflow_dispatch` trigger only. See [D-004](DECISIONS.md). |
 
 ## Answered questions
 
 | ID | Answered | Question | Durable answer | Related decision / evidence |
 |---|---|---|---|---|
-| — | — | No substantive project questions have been answered and recorded yet. | — | — |
+| Q-008 | 2026-10-26 | What explicit trigger or approval mechanism should initiate the separate GitHub Pages deployment? | Publishing is initiated manually from the GitHub Actions tab with `workflow_dispatch`; sandbox pushes continue to use validation only. | [D-004](DECISIONS.md) and [publish workflow](../.github/workflows/deploy-blazor-webgpu.yml) |
 
 ## Updating this ledger
 
