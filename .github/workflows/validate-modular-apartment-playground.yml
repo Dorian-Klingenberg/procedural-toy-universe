@@ -1,0 +1,35 @@
+name: Validate modular apartment playground
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "sandboxes/modular-apartment-playground/**"
+      - ".github/workflows/validate-modular-apartment-playground.yml"
+  pull_request:
+    paths:
+      - "sandboxes/modular-apartment-playground/**"
+      - ".github/workflows/validate-modular-apartment-playground.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Build sandbox
+        run: >
+          dotnet build
+          sandboxes/modular-apartment-playground/ModularApartmentPlayground.csproj
+          --configuration Release

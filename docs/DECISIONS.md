@@ -15,10 +15,18 @@ This is the durable record of consequential project decisions and the important 
 ### D-002 — Organize learning demos as sandboxes with isolated checks and deliberate site deployment
 
 - **Date:** 2026-10-26
-- **Status:** Accepted
+- **Status:** Superseded by D-003 for the first sandbox's implementation stack; the separate, deliberate publishing policy remains.
 - **Decision:** Call the independent small learning/demo directories `sandboxes/`. Run checks or builds for an individual sandbox on pushes that affect it. Keep publishing to GitHub Pages as a separate, deliberate action rather than deploying on every sandbox push. When multiple browser-based sandboxes are hosted together, assemble them into one Pages site artifact with each sandbox preserved under its own subdirectory and its own `index.html` entry point.
 - **Context and rationale:** The imported deployment workflow was specific to one Blazor WebGPU app and deployed on pushes. The user clarified that browser sandboxes will be local HTML static sites, each suited to a distinct subdirectory, and accepted separating per-sandbox validation from deliberate web publication. A shared Pages artifact avoids independent deploys overwriting one another.
-- **References:** User-approved workflow discussion on 2026-10-26; [current imported workflow](../.github/workflows/deploy-blazor-webgpu); [`OPEN_QUESTIONS.md`](OPEN_QUESTIONS.md).
+- **References:** User-approved workflow discussion on 2026-10-26; [imported workflow](../.github/workflows/deploy-blazor-webgpu.yml); [`OPEN_QUESTIONS.md`](OPEN_QUESTIONS.md).
+
+### D-003 — Build the first sandbox as a Blazor WebAssembly WebGPU playground
+
+- **Date:** 2026-10-27
+- **Status:** Accepted
+- **Decision:** Implement the first sandbox in `sandboxes/modular-apartment-playground/` as a stand-alone Blazor WebAssembly app targeting .NET 10, using Fluent UI Blazor for interface components and the browser's native WebGPU API through JavaScript interop. Give it a sandbox-scoped GitHub Actions build workflow. Keep Pages deployment separate and deliberate; its explicit trigger remains open under Q-008.
+- **Context and rationale:** The user selected Blazor WebAssembly, Fluent UI, and WebGPU for the first sandbox and requested a full-width interface with a basic rotating cube. This sandbox choice does not select the engine or application stack for the core project, so Q-001 remains open. Unlike the prior assumption that browser sandboxes would be authored as local static HTML, this sandbox is a .NET application that publishes static web assets.
+- **References:** User-approved implementation request on 2026-10-27; [sandbox README](../sandboxes/modular-apartment-playground/README.md); [sandbox workflow](../.github/workflows/validate-modular-apartment-playground.yml); [`OPEN_QUESTIONS.md`](OPEN_QUESTIONS.md).
 
 ## Updating this record
 

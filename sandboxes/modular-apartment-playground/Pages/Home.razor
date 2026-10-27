@@ -1,0 +1,86 @@
+﻿@page "/"
+@implements IAsyncDisposable
+@inject IJSRuntime JS
+
+<PageTitle>Modular Apartment Playground</PageTitle>
+
+<main class="playground">
+    <header class="playground-header">
+        <div>
+            <p class="eyebrow">FIRST SANDBOX · GRAPHICS FOUNDATION</p>
+            <h1>Modular Apartment Playground</h1>
+            <p class="intro">A clean, full-width WebGPU viewport to start exploring 3D space.</p>
+        </div>
+
+        <FluentButton Appearance="ButtonAppearance.Primary"
+                      Disabled="@(!_webGpuReady)"
+                      OnClick="ToggleRotation">
+            @(_isPaused ? "Resume rotation" : "Pause rotation")
+        </FluentButton>
+    </header>
+
+    <section class="viewport" aria-label="WebGPU 3D viewport">
+        <canvas @ref="_canvas" class="webgpu-canvas" aria-label="A rotating, multicolored 3D cube"></canvas>
+        <p class="viewport-status" role="status">@_status</p>
+    </section>
+
+    <p class="controls-hint">The cube rotates automatically. Use the button to pause or resume it.</p>
+</main>
+
+@code {
+    private ElementReference _canvas;
+    private IJSObjectReference? _renderer;
+    private string _status = "Starting WebGPU…";
+    private bool _webGpuReady;
+    private bool _isPaused;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender)
+        {
+            return;
+        }
+
+        try
+        {
+            _renderer = await JS.InvokeAsync<IJSObjectReference>(
+                "import",
+                "./js/cube-renderer.js");
+            _webGpuReady = await _renderer.InvokeAsync<bool>("start", _canvas);
+            _status = await _renderer.InvokeAsync<string>("getStatus");
+        }
+        catch (JSException)
+        {
+            _status = "WebGPU could not be initialized. Try a WebGPU-compatible browser on localhost or HTTPS.";
+        }
+
+        StateHasChanged();
+    }
+
+    private async Task ToggleRotation()
+    {
+        _isPaused = !_isPaused;
+
+        if (_renderer is not null)
+        {
+            await _renderer.InvokeVoidAsync("setPaused", _isPaused);
+        }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        if (_renderer is null)
+        {
+            return;
+        }
+
+        try
+        {
+            await _renderer.InvokeVoidAsync("stop");
+            await _renderer.DisposeAsync();
+        }
+        catch (JSDisconnectedException)
+        {
+        }
+    }
+}
