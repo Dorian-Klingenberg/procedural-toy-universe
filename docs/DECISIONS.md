@@ -44,6 +44,30 @@ This is the durable record of consequential project decisions and the important 
 - **Context and rationale:** This keeps the first construction increment focused on reusable scene composition while postponing editor UX. The component boundary supports later snapping, persistence, and blueprint work without hard-coding one apartment layout.
 - **References:** User-approved implementation discussion on 2026-10-26; [sandbox README](../sandboxes/modular-apartment-playground/README.md).
 
+### D-006 — Keep the repository public for accountless family viewing
+
+- **Date:** 2026-10-27
+- **Status:** Accepted
+- **Decision:** Keep the repository public while family and friends need to view it without GitHub accounts. Public visibility means the repository is visible to everyone, not only the intended family audience. This does not grant an open-source license or allow accountless issue and pull-request participation.
+- **Context and rationale:** The user wants family and friends to access the project before they have GitHub accounts. GitHub accounts will still be needed for interactive collaboration. Copilot billing controls are being handled separately.
+- **References:** User clarification on 2026-10-27; [README](../README.md); [Q-009 and Q-010](OPEN_QUESTIONS.md).
+
+### D-007 — Restrict public issue and pull-request creation to collaborators
+
+- **Date:** 2026-10-27
+- **Status:** Accepted
+- **Decision:** Keep the repository publicly readable, but allow only collaborators to create issues and pull requests.
+- **Context and rationale:** The user wants family and friends to browse the public repository without accounts, while limiting interactive participation to invited contributors. Accounts are required for issue and pull-request participation.
+- **References:** User clarification on 2026-10-27; [repository settings](https://github.com/TimmyTheTurtle/procedural-toy-universe/settings); [Q-010](OPEN_QUESTIONS.md).
+
+### D-008 — Organize certification study into three linked tracks
+
+- **Date:** 2026-10-27
+- **Status:** Accepted
+- **Decision:** Organize the training materials into separate GH-600, AI-103, and AI-500 directories, with a training hub for shared Responsible AI practices and cross-references between tracks.
+- **Context and rationale:** GH-600 is the current first target, while AI-103 and AI-500 remain active learning goals. Separate tracks keep certification-specific objectives and evidence distinct while making common principles easy to reuse.
+- **References:** User direction on 2026-10-27; [training hub](../training/README.md); [GH-600](../training/gh-600/README.md); [AI-103](../training/ai-103/README.md); [AI-500](../training/ai-500/README.md).
+
 ## Updating this record
 
 - Give each consequential decision a stable `D-NNN` ID; do not reuse IDs.
