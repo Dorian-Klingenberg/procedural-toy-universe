@@ -24,7 +24,7 @@ Read [docs/VISION.md](docs/VISION.md), [docs/ARCHITECTURE.md](docs/ARCHITECTURE.
 Read [AGENTS.md](AGENTS.md). Copilot can use the repository prompt `/initialize` from [`.github/prompts/initialize.prompt.md`](.github/prompts/initialize.prompt.md) where repository prompt files are supported. Codex should read `AGENTS.md` and may use the `initialize` skill under `.agents/skills/initialize/` where skills are supported. Both use the same instructions and project docs.
 
 ## Learning resources
-- [GH-600 study companion and resource index](training/gh-600/README.md)
+- [Certification training hub](training/README.md) — GH-600, AI-103, and AI-500 study tracks with shared Responsible AI practices.
 
 ## Status
 Concept / architecture exploration. No implementation stack chosen yet.
