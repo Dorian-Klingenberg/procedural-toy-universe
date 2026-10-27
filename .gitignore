@@ -9,6 +9,8 @@ build/
 dist/
 out/
 .cache/
+**/bin/
+**/obj/
 __pycache__/
 *.pyc
 # Secrets and local settings
