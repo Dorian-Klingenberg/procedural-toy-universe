@@ -9,7 +9,7 @@
         <div>
             <p class="eyebrow">FIRST SANDBOX · GRAPHICS FOUNDATION</p>
             <h1>Modular Apartment Playground</h1>
-            <p class="intro">A clean, full-width WebGPU viewport to start exploring 3D space.</p>
+            <p class="intro">A full-width WebGPU viewport for assembling interchangeable wall components.</p>
         </div>
 
         <FluentButton Appearance="ButtonAppearance.Primary"
@@ -20,11 +20,11 @@
     </header>
 
     <section class="viewport" aria-label="WebGPU 3D viewport">
-        <canvas @ref="_canvas" class="webgpu-canvas" aria-label="A rotating, multicolored 3D cube"></canvas>
+        <canvas @ref="_canvas" class="webgpu-canvas" aria-label="A modular room with plain, window, and door walls"></canvas>
         <p class="viewport-status" role="status">@_status</p>
     </section>
 
-    <p class="controls-hint">The cube rotates automatically. Use the button to pause or resume it.</p>
+    <p class="controls-hint">The room rotates automatically. Use the button to pause or resume it.</p>
 </main>
 
 @code {

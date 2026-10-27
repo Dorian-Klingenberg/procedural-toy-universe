@@ -1,6 +1,6 @@
 # Modular Apartment Playground
 
-A Blazor WebAssembly sandbox for experimenting with a full-width 3D viewport. The first scene renders a rotating colored cube with browser-native WebGPU and uses Fluent UI Blazor for its controls.
+A Blazor WebAssembly sandbox for experimenting with a full-width 3D viewport. The first scene renders a rotating room assembled from interchangeable plain, window, and door wall components with browser-native WebGPU and uses Fluent UI Blazor for its controls.
 
 ## Run locally
 

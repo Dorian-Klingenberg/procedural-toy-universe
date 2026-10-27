@@ -36,6 +36,14 @@ This is the durable record of consequential project decisions and the important 
 - **Context and rationale:** The prior deployment workflow referenced missing `projects/grannys-house-trials/...` directories. A manual trigger makes site publication deliberate while the sandbox is still evolving and avoids coupling routine validation to public deployment. The repository Pages source must be set to GitHub Actions before the first deployment.
 - **References:** User-approved workflow discussion on 2026-10-26; [publish workflow](../.github/workflows/deploy-blazor-webgpu.yml); [sandbox README](../sandboxes/modular-apartment-playground/README.md); [Q-008](OPEN_QUESTIONS.md).
 
+### D-005 — Start the apartment scene with interchangeable wall components
+
+- **Date:** 2026-10-26
+- **Status:** Accepted
+- **Decision:** The modular apartment playground's first scene should be assembled from interchangeable wall component definitions, initially including plain walls, window walls, and door walls. The UI does not need component editing controls yet.
+- **Context and rationale:** This keeps the first construction increment focused on reusable scene composition while postponing editor UX. The component boundary supports later snapping, persistence, and blueprint work without hard-coding one apartment layout.
+- **References:** User-approved implementation discussion on 2026-10-26; [sandbox README](../sandboxes/modular-apartment-playground/README.md).
+
 ## Updating this record
 
 - Give each consequential decision a stable `D-NNN` ID; do not reuse IDs.
