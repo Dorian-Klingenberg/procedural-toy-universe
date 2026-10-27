@@ -3,6 +3,7 @@
 - **Status:** Starter checklist; objective-by-objective mapping is not yet complete.
 - **Exam focus:** Developing AI apps and agents on Azure.
 - **Authoritative source:** [Official AI-103 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103). Recheck the live guide before each study cycle.
+- **Related study aid:** [AI-103 lessons learned](LESSONS_LEARNED.md).
 
 ## Preparation
 

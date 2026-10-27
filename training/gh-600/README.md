@@ -6,6 +6,8 @@ See the [training hub](../README.md) for the cross-certification study sequence,
 
 ## Study plan
 
+- [Lessons learned](LESSONS_LEARNED.md) — study notes from today's GH-600 and repository-readiness discussion.
+- [New-repository checklist](NEW_REPOSITORY_CHECKLIST.md) — a reusable checklist for creating a repository suitable for GH-600-aligned agent workflow practice.
 - [Repository readiness checklist](REPOSITORY_READINESS.md) — a draft baseline for public access, family collaboration, and GH-600-aligned repository practice.
 - [Repository-specific exercise plan](EXERCISE_PLAN.md) — maps each objective in the live official guide to a proposed exercise and evidence appropriate to this project's current state.
 

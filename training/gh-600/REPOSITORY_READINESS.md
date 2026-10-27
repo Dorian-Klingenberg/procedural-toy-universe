@@ -32,6 +32,8 @@
 
 ## Related training
 
+- [GH-600 lessons learned](LESSONS_LEARNED.md)
+- [Reusable new-repository checklist](NEW_REPOSITORY_CHECKLIST.md)
 - [Training hub and shared Responsible AI checklist](../README.md)
 - [AI-103 study track](../ai-103/README.md) and [readiness checklist](../ai-103/READINESS_CHECKLIST.md)
 - [AI-500 study track](../ai-500/README.md) and [readiness checklist](../ai-500/READINESS_CHECKLIST.md)
