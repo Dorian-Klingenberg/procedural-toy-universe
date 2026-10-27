@@ -2,6 +2,10 @@
 
 This directory organizes preparation for the [GitHub Certified: Agentic AI Developer](https://learn.microsoft.com/en-us/credentials/certifications/agentic-ai-developer/) certification, Exam GH-600: Developing in Agentic AI Systems.
 
+## Study plan
+
+- [Repository-specific exercise plan](EXERCISE_PLAN.md) — maps each objective in the live official guide to a proposed exercise and evidence appropriate to this project's current state.
+
 ## Authoritative references
 
 - [Official GH-600 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-600)
