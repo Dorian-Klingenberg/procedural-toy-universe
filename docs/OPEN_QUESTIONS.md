@@ -15,7 +15,7 @@ Priorities are relative and may change as the project evolves. An open question 
 
 | ID | Priority | Status | Question | Context / next step |
 |---|---|---|---|---|
-| Q-001 | P1 | Open | Which engine, programming language, and smallest technical stack should the project use for its first construction-and-blueprint slice? | Foundation decision in [`ROADMAP.md`](ROADMAP.md); ask before selecting a stack. |
+| Q-001 | P1 | Open | Which engine, programming language, and smallest technical stack should the project use for its first construction-and-blueprint slice? | Foundation decision in [`ROADMAP.md`](ROADMAP.md); the sandbox-specific choice in [D-003](DECISIONS.md) does not select the core project stack. |
 | Q-002 | P1 | Open | What code license, if any, should the project adopt? | Foundation decision in [`ROADMAP.md`](ROADMAP.md); content and dependency licenses must also be reviewed separately. |
 | Q-003 | P2 | Open | How should inherited and custom connector interfaces coexist? | Architecture prototype question; retain explicit interface exposure. |
 | Q-004 | P2 | Open | What grid resolutions and rotation freedoms should be supported? | Architecture prototype question; grids remain optional. |

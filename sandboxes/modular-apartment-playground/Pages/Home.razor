@@ -12,7 +12,7 @@
             <p class="intro">A clean, full-width WebGPU viewport to start exploring 3D space.</p>
         </div>
 
-        <FluentButton Appearance="Appearance.Accent"
+        <FluentButton Appearance="ButtonAppearance.Primary"
                       Disabled="@(!_webGpuReady)"
                       OnClick="ToggleRotation">
             @(_isPaused ? "Resume rotation" : "Pause rotation")

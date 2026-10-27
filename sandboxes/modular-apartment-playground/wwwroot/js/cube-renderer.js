@@ -97,7 +97,13 @@ export async function start(canvas) {
         context.configure({ device, format, alphaMode: "opaque" });
 
         const shader = device.createShaderModule({ code: shaderCode });
-        const pipeline = device.createRenderPipeline({
+        const shaderDiagnostics = await shader.getCompilationInfo();
+        if (shaderDiagnostics.messages.some((message) => message.type === "error")) {
+            device.destroy();
+            return setStatus("The WebGPU cube shader could not be compiled.");
+        }
+
+        const pipeline = await device.createRenderPipelineAsync({
             layout: "auto",
             vertex: {
                 module: shader,
@@ -115,7 +121,7 @@ export async function start(canvas) {
                 entryPoint: "fragmentMain",
                 targets: [{ format }],
             },
-            primitive: { topology: "triangle-list", cullMode: "back" },
+            primitive: { topology: "triangle-list" },
             depthStencil: { format: "depth24plus", depthWriteEnabled: true, depthCompare: "less" },
         });
 
@@ -212,6 +218,10 @@ export async function start(canvas) {
                 device.destroy();
             },
             setPaused(value) {
+                if (paused && !value) {
+                    startTime = performance.now() - uniforms[0] / 0.00045;
+                }
+
                 paused = value;
             },
         };
