@@ -6,6 +6,8 @@ See the [training hub](../README.md) for the cross-certification study sequence,
 
 ## Study plan
 
+- [Test me later](TEST_ME_LATER.md) — automatically maintained revisit queue for
+  confusing wording, prerequisites, and shaky concepts.
 - [Lessons learned](LESSONS_LEARNED.md) — study notes from today's GH-600 and repository-readiness discussion.
 - [New-repository checklist](NEW_REPOSITORY_CHECKLIST.md) — a reusable checklist for creating a repository suitable for GH-600-aligned agent workflow practice.
 - [Repository readiness checklist](REPOSITORY_READINESS.md) — a draft baseline for public access, family collaboration, and GH-600-aligned repository practice.
@@ -17,6 +19,10 @@ See the [training hub](../README.md) for the cross-certification study sequence,
 - [Certification overview](https://learn.microsoft.com/en-us/credentials/certifications/agentic-ai-developer/)
 
 The official study guide is the source of truth for exam scope and may change. This companion does not reproduce it. The domain names and approximate weights below are a concise index; the study prompts are original supplemental notes, not additional official exam objectives. Check the current official guide regularly and use its detailed objective list to confirm coverage.
+
+Use this material as a starting map, not a fixed sequence. The tutor may follow
+a prerequisite, an experiment, or a useful AI-103/AI-500 connection before
+returning to the next GH-600 topic.
 
 ## Coverage checklist
 

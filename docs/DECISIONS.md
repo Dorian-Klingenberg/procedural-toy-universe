@@ -68,6 +68,14 @@ This is the durable record of consequential project decisions and the important 
 - **Context and rationale:** GH-600 is the current first target, while AI-103 and AI-500 remain active learning goals. Separate tracks keep certification-specific objectives and evidence distinct while making common principles easy to reuse.
 - **References:** User direction on 2026-10-27; [training hub](../training/README.md); [GH-600](../training/gh-600/README.md); [AI-103](../training/ai-103/README.md); [AI-500](../training/ai-500/README.md).
 
+### D-009 — Make the Certification Learning Coach a free-form Copilot learning lab
+
+- **Date:** 2026-10-29
+- **Status:** Accepted
+- **Decision:** The Certification Learning Coach is a GitHub Copilot-oriented tutor that reads repository context, works only under `training/`, and teaches through conversation, fair practice, automatic track-specific revisit queues, and learner-approved exploratory programs. GH-600 is the default path; AI-103 and AI-500 are brought in when they provide useful prerequisites or deeper understanding, with AI-500 intentionally used for software-engineering and multi-agent depth. The coach proposes an experiment before building it, then may run it and help deploy it when the learner explicitly asks.
+- **Context and rationale:** The owner wants discovery and real understanding rather than a fixed curriculum, rote memorization, or an evidence/approval bureaucracy. The coaching focus includes recognizing unfamiliar assessment wording, exposing prerequisites, revisiting misconceptions, and learning by making simple proof-of-concept programs.
+- **References:** User-approved coaching discussion on 2026-10-29; [coach definition](../.github/agents/certification-learning-coach.agent.md); [training hub](../training/README.md); [component layout](../training/coach-agent-development/PACKAGE_LAYOUT.md).
+
 ## Updating this record
 
 - Give each consequential decision a stable `D-NNN` ID; do not reuse IDs.

@@ -29,8 +29,22 @@ Build an original, open-source-friendly modular construction and progressive pro
 - Prefer small, reversible commits and explain verification. If tests cannot run, say so.
 - Do not invent completed functionality or claim decisions have been made where docs mark them open.
 
+## Certification Learning Coach exception
+
+The Certification Learning Coach is a learning lab, not a construction-toolkit
+delivery agent. When that custom agent is selected, its own instructions govern
+study conversations and exploratory work. It may read the wider repository for
+context, but creates, changes, and runs its learning materials and experiments
+only under `training/`.
+
+The construction-specific planning workflow and project knowledge-record rules
+do not apply to ordinary tutoring conversations or to experiments contained in
+`training/`. They apply again if work is proposed outside that learning lab or
+would make a project-direction decision. This exception does not authorize the
+coach to change files outside `training/`.
+
 ## Project knowledge records — required
-Keep `docs/OPEN_QUESTIONS.md` and `docs/DECISIONS.md` as the durable, concise project records. These requirements apply to every agent and substantive project conversation; they are not optional and do not depend on a skill being available.
+Keep `docs/OPEN_QUESTIONS.md` and `docs/DECISIONS.md` as the durable, concise project records. These requirements apply to every agent and substantive project conversation, except for ordinary Certification Learning Coach work as described in the exception above; they are not optional and do not depend on a skill being available.
 
 - Before planning, consult the records and relevant source documents. Treat the records as indexes and summaries; the referenced source documents remain authoritative for their subject matter.
 - Add substantive unanswered project questions to `docs/OPEN_QUESTIONS.md`, with a stable ID, concise wording, priority, status, and source/context. Update priority or status when circumstances change. When answered, record the concise answer and link the related decision or evidence; do not leave resolved items marked open.
