@@ -1,66 +1,66 @@
-# Certification coach agent development
+# Certification Learning Coach (practice agent)
 
-This directory is the working area for designing the reusable certification
-learning coach. It is intentionally inside `training/` so the coach's
-knowledge, skills, prompts, curricula, source records, and learner artifacts
-can become portable with the training package.
+The Certification Learning Coach is a Copilot custom agent that helps study
+for GH-600, AI-103, and AI-500. It is a **practice agent**: the first custom
+agent built here, used to learn the agent-building process by trial and error.
+It is experimental, not production-ready, and its design history is not
+tracked.
 
-## Status
+## Files
 
-- **Stage:** Current-round design and refinement
-- **Active tracks:** GH-600, AI-103, and AI-500
-- **Initial entry point:** GH-600
-- **Additional emphasis:** AI-500 lessons learned, questions and answers, and
-  future exercises
-- **Training root:** `training/` directly below the repository root
-- **Agent status:** Copilot-first experimental adapter added; behavior testing
-  is pending and no production/portability claim is made
+| File | What it is |
+|---|---|
+| [`certification-learning-coach.agent.md`](../../.github/agents/certification-learning-coach.agent.md) | The agent definition Copilot loads. It lives in `.github/agents/` so Copilot can find it. |
+| [COPILOT_AGENT_TEST_PLAN.md](COPILOT_AGENT_TEST_PLAN.md) | A checklist you run by hand in Copilot Chat to see whether the agent follows its rules |
+| [PACKAGE_LAYOUT.md](PACKAGE_LAYOUT.md) | The proposed folder layout for the training material, mostly future folders |
+| [YOUTUBE_RESOURCES.md](YOUTUBE_RESOURCES.md) | Candidate videos. This is an AI-generated draft, not learner-approved evidence. |
 
-## Current round
+## Requirements
 
-This round defines and refines:
+A checked box means the agent definition is written to meet the requirement.
+Whether Copilot actually behaves that way is only confirmed by running the
+[test plan](COPILOT_AGENT_TEST_PLAN.md).
 
-1. The portable training-package boundary.
-2. The coach's role and source hierarchy.
-3. The minimal custom-agent definition.
-4. Training-only write scope and learner-evidence safeguards.
-5. Stop conditions and the distinction between AI-generated drafts and learner
-   evidence.
+**Package**
 
-The Copilot-first agent definition is
-[`.github/agents/certification-learning-coach.agent.md`](../../.github/agents/certification-learning-coach.agent.md).
-The development folder contains its supporting design records; the agent
-definition itself is kept in Copilot's discoverable location.
+- [x] The package layout is documented under `training/`
+  ([PACKAGE_LAYOUT.md](PACKAGE_LAYOUT.md)).
+- [x] The existing GH-600, AI-103, and AI-500 track directories are preserved.
+- [x] Coach development material is kept separate from learner evidence.
+- [x] The Copilot-specific agent definition is kept separate from the
+  host-neutral package.
 
-The proposed package layout is documented in
-[PACKAGE_LAYOUT.md](PACKAGE_LAYOUT.md). It preserves the existing certification
-track directories and keeps coach development separate from learner evidence.
+**Agent behavior**
 
-The current-round approval convention is in
-[APPROVAL_WORKFLOW.md](APPROVAL_WORKFLOW.md). The review result is in
-[REVIEW_CHECKLIST.md](REVIEW_CHECKLIST.md).
+- [x] No model or reasoning effort is hard-coded; model selection stays
+  automatic.
+- [x] Low or medium effort is preferred where the host allows it; high effort
+  is never targeted.
+- [x] The agent writes only under `training/`. Until the test plan shows
+  whether Copilot enforces this, it is only an instruction to the agent.
+- [x] The agent has no shell, deployment, GitHub-mutation, MCP-mutation, or
+  subagent capability.
+- [x] Source authority and conflict handling are explicit.
 
-The Copilot-specific prototype cases are in
-[HOST_PROTOTYPE.md](HOST_PROTOTYPE.md).
+**Learner evidence**
 
-The current YouTube-only candidate list is in
-[YOUTUBE_RESOURCES.md](YOUTUBE_RESOURCES.md). It is an AI-generated draft and
-is not learner-approved evidence.
+- [x] AI-generated drafts are kept separate from learner-approved evidence.
+- [x] Work is marked complete or learner-approved only when the learner
+  explicitly says so for that item.
+- [x] Supplemental resources record dates, descriptions, objective mapping,
+  freshness status, and video timestamps where applicable.
 
-## Deferred rounds
+## Before relying on it
 
-- Test Copilot model and effort selection, keeping model selection automatic
-  and preferring low or medium effort without targeting high effort.
-- Test whether writes can be limited to `training/` and whether training-local
-  skills and knowledge are discoverable.
-- Build the learner-owned GH-600 Domain 1/M1 workflow.
-- Curate supplemental Microsoft Learn, official Microsoft/GitHub, Pluralsight,
-  and Microsoft YouTube resources current as of 2026-07-31 or later.
-- Record video timestamps and short descriptions for relevant segments.
-- Perform final validation and document host-specific limitations.
+- Run [COPILOT_AGENT_TEST_PLAN.md](COPILOT_AGENT_TEST_PLAN.md) and record the
+  results.
+- Don't claim the `training/`-only write rule is enforced unless a test shows
+  that Copilot blocks the write.
 
-## Guardrail
+## Possible next steps
 
-The Copilot-first agent is present for the explicitly started prototype. Do not
-treat it as validated or production-ready until the cases in
-[HOST_PROTOTYPE.md](HOST_PROTOTYPE.md) have been run and recorded.
+- Build the GH-600 Domain 1/M1 study workflow.
+- Curate supplemental Microsoft Learn, GitHub, Pluralsight, and Microsoft
+  YouTube resources, with timestamps for relevant video segments.
+- Apply what this agent teaches to future official agents, most of which should
+  follow GH-600 and industry standards as closely as practical.

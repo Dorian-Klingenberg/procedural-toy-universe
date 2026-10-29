@@ -21,7 +21,7 @@ The project is **not a Star Wars game**. Familiar science-fiction craft and loca
 Read [docs/VISION.md](docs/VISION.md), [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), and [docs/ROADMAP.md](docs/ROADMAP.md). First prototype: a small 3D modular room/corridor editor with snapping, connector exposure, saved blueprints, and deterministic constraint-aware assembly. Do not start with a full planet or spaceship.
 
 ## Agent onboarding
-Read [AGENTS.md](AGENTS.md). Copilot can use the repository prompt `/initialize` from [`.github/prompts/initialize.prompt.md`](.github/prompts/initialize.prompt.md) where repository prompt files are supported. Codex should read `AGENTS.md` and may use the `initialize` skill under `.agents/skills/initialize/` where skills are supported. Both use the same instructions and project docs.
+Read [AGENTS.md](AGENTS.md). Copilot can use the `/initialize` skill from [`.github/skills/initialize/SKILL.md`](.github/skills/initialize/SKILL.md) where repository skills are supported. Codex should read `AGENTS.md` and may use the `initialize` skill under `.agents/skills/initialize/` where skills are supported. Both use the same instructions and project docs.
 
 ## Learning resources
 - [Certification training hub](training/README.md) — GH-600, AI-103, and AI-500 study tracks with shared Responsible AI practices.
