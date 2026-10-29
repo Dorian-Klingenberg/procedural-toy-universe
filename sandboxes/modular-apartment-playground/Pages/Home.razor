@@ -9,22 +9,65 @@
         <div>
             <p class="eyebrow">FIRST SANDBOX · GRAPHICS FOUNDATION</p>
             <h1>Modular Apartment Playground</h1>
-            <p class="intro">A full-width WebGPU viewport for assembling interchangeable wall components.</p>
+            <p class="intro">A minimal WebGPU device initialization test.</p>
         </div>
 
         <FluentButton Appearance="ButtonAppearance.Primary"
                       Disabled="@(!_webGpuReady)"
                       OnClick="ToggleRotation">
-            @(_isPaused ? "Resume rotation" : "Pause rotation")
+            Initialize device
         </FluentButton>
     </header>
 
-    <section class="viewport" aria-label="WebGPU 3D viewport">
-        <canvas @ref="_canvas" class="webgpu-canvas" aria-label="A modular room with plain, window, and door walls"></canvas>
-        <p class="viewport-status" role="status">@_status</p>
+    <section class="editor" aria-label="Modular apartment editor">
+        <aside class="component-panel" aria-label="Wall component palette">
+            <p class="panel-eyebrow">COMPONENTS</p>
+            <h2>Wall modules</h2>
+            <p class="panel-copy">Choose a reusable wall type to add to the room.</p>
+            @foreach (var component in Components)
+            {
+                <button class="component-card" @onclick="() => SelectComponent(component.Key)">
+                    <span class="component-swatch @component.Key"></span>
+                    <span>
+                        <strong>@component.Label</strong>
+                        <small>@component.Description</small>
+                    </span>
+                </button>
+            }
+        </aside>
+
+        <section class="viewport" aria-label="WebGPU 3D viewport">
+            <canvas @ref="_canvas" class="webgpu-canvas" tabindex="0" aria-label="A finite grid build plane with modular walls"></canvas>
+            <p class="viewport-status" role="status">@_status</p>
+        </section>
+
+        <aside class="inspector-panel" aria-label="Selected component inspector">
+            <p class="panel-eyebrow">INSPECTOR</p>
+            <h2>@(SelectedIndex is null ? "No selection" : $"Wall {SelectedIndex + 1}")</h2>
+            @if (SelectedIndex is not null)
+            {
+                <label for="wall-type">Wall type</label>
+                <select id="wall-type" value="@SelectedType" @onchange="ChangeSelectedType">
+                    @foreach (var component in Components)
+                    {
+                        <option value="@component.Key">@component.Label</option>
+                    }
+                </select>
+                <p class="selection-note">This test keeps placement simple while the component model is established.</p>
+                <button class="delete-button" @onclick="RemoveSelected">Delete component</button>
+            }
+            else
+            {
+                <p class="selection-note">Choose a wall module, then click the build plane to place it. Press R to rotate it 90°.</p>
+                @if (PlacementType is not null)
+                {
+                    <button class="place-button" @onclick="RotatePlacement">Rotate 90°</button>
+                }
+            }
+        </aside>
     </section>
 
-    <p class="controls-hint">The room rotates automatically. Use the button to pause or resume it.</p>
+    <p class="controls-hint">Rendering and scene code are intentionally disabled while the WebGPU baseline is verified.</p>
 </main>
 
 @code {
@@ -33,6 +76,16 @@
     private string _status = "Starting WebGPU…";
     private bool _webGpuReady;
     private bool _isPaused;
+    private int? SelectedIndex;
+    private string SelectedType = "plain";
+    private string? PlacementType;
+
+    private static readonly ComponentOption[] Components =
+    [
+        new("plain", "Plain wall", "Solid structural panel"),
+        new("window", "Window wall", "Wall with a glazed opening"),
+        new("door", "Door wall", "Wall with an entry opening"),
+    ];
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -46,7 +99,7 @@
             _renderer = await JS.InvokeAsync<IJSObjectReference>(
                 "import",
                 "./js/cube-renderer.js");
-            _webGpuReady = await _renderer.InvokeAsync<bool>("start", _canvas);
+            _webGpuReady = await _renderer.InvokeAsync<bool>("start");
             _status = await _renderer.InvokeAsync<string>("getStatus");
         }
         catch (JSException)
@@ -67,6 +120,49 @@
         }
     }
 
+        private async Task SelectComponent(string type)
+        {
+            if (_renderer is null)
+            {
+                return;
+            }
+
+            PlacementType = type;
+            await _renderer.InvokeVoidAsync("beginPlacement", type);
+            await InvokeAsync(StateHasChanged);
+        }
+
+        private async Task RotatePlacement()
+        {
+            if (_renderer is null) return;
+            await _renderer.InvokeVoidAsync("rotatePlacement");
+        }
+
+        private async Task ChangeSelectedType(ChangeEventArgs args)
+        {
+            if (SelectedIndex is null || _renderer is null || args.Value is not string type)
+            {
+                return;
+            }
+
+            await _renderer.InvokeAsync<bool>("updateWall", SelectedIndex.Value, type);
+            SelectedType = type;
+        }
+
+        private async Task RemoveSelected()
+        {
+            if (SelectedIndex is null || _renderer is null)
+            {
+                return;
+            }
+
+            await _renderer.InvokeAsync<bool>("removeWall", SelectedIndex.Value);
+            SelectedIndex = null;
+            await InvokeAsync(StateHasChanged);
+        }
+
+    private sealed record ComponentOption(string Key, string Label, string Description);
+
     public async ValueTask DisposeAsync()
     {
         if (_renderer is null)
@@ -82,5 +178,6 @@
         catch (JSDisconnectedException)
         {
         }
+
     }
 }

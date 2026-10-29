@@ -45,6 +45,100 @@ h1 {
     box-shadow: 0 0.25rem 1rem rgb(20 30 40 / 8%);
 }
 
+.editor {
+    display: grid;
+    grid-template-columns: minmax(12rem, 15rem) minmax(0, 1fr) minmax(12rem, 15rem);
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.component-panel,
+.inspector-panel {
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #d8dde3;
+    border-radius: 0.75rem;
+}
+
+.panel-eyebrow {
+    margin: 0 0 0.35rem;
+    color: #53606d;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.panel-copy,
+.selection-note {
+    color: #53606d;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.component-card {
+    display: flex;
+    width: 100%;
+    gap: 0.65rem;
+    align-items: center;
+    margin-top: 0.65rem;
+    padding: 0.65rem;
+    text-align: left;
+    background: #f7f8fa;
+    border: 1px solid #d8dde3;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.component-card:hover {
+    border-color: #2563a8;
+    background: #eef5fc;
+}
+
+.component-card small {
+    display: block;
+    margin-top: 0.2rem;
+    color: #53606d;
+    font-size: 0.72rem;
+}
+
+.component-swatch {
+    width: 1.4rem;
+    height: 2rem;
+    flex: 0 0 auto;
+    border-radius: 0.2rem;
+}
+
+.component-swatch.plain { background: #a1adb9; }
+.component-swatch.window { background: #59b8df; }
+.component-swatch.door { background: #b8844d; }
+
+.inspector-panel label {
+    display: block;
+    margin-top: 1.25rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.inspector-panel select {
+    width: 100%;
+    margin-top: 0.35rem;
+    padding: 0.5rem;
+}
+
+.delete-button {
+    padding: 0.5rem 0.75rem;
+    color: #a4262c;
+    background: #fff;
+    border: 1px solid #d8a2a5;
+    border-radius: 0.35rem;
+    cursor: pointer;
+}
+
 .webgpu-canvas {
     display: block;
     width: 100%;
@@ -75,5 +169,9 @@ h1 {
     .viewport {
         height: 60svh;
         min-height: 20rem;
+    }
+
+    .editor {
+        grid-template-columns: 1fr;
     }
 }
