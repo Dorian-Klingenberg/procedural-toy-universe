@@ -60,6 +60,25 @@ This concept also connects to earlier game ideas involving ancient infrastructur
 
 ---
 
+### Visual: the two interacting hierarchies
+
+The following recreates the paired requirements/construction diagram from our chat as a GitHub-native Mermaid diagram:
+
+```mermaid
+flowchart LR
+  subgraph R["Requirements hierarchy"]
+    R1["Habitable complex"] --> R2["Habitation + access + utilities"]
+    R2 --> R3["Sleeping + lighting + airflow"]
+  end
+  subgraph C["Construction hierarchy"]
+    C1["Residential complex"] --> C2["Apartments + corridors + plant"]
+    C2 --> C3["Beds + lights + vents"]
+  end
+  C3 -. "provides capabilities / evidence" .-> R3
+  C2 -. "collectively satisfies" .-> R2
+  C1 -. "fulfills purpose" .-> R1
+```
+
 ## 3. The key distinction: physical hierarchy versus semantic/requirements graph
 
 A useful first approximation is:
@@ -104,6 +123,21 @@ Their edges need not align. A single service plant may satisfy the environmental
 | **Generated representation** | Render mesh, GPU buffer, cached texture, impostor, acceleration structure | Authoritative source of truth |
 
 Terminology is provisional. The important distinction is **what something is**, **what it can do**, **what is demanded of it**, and **whether the demand is actually met**.
+
+### Visual: requirements decomposition
+
+```mermaid
+flowchart TD
+  H["REQ-100: Habitation for two occupants"]
+  H --> S["REQ-110: Sleeping capacity ≥ 2"]
+  H --> A["REQ-120: Accessible circulation"]
+  H --> L["REQ-130: Adequate illumination"]
+  H --> E["REQ-140: Environmental support"]
+  S --> B["Two pods OR one suitable double bed"]
+  A --> D["Connected doors + traversable paths"]
+  L --> P["Lighting fixtures + power + verified light levels"]
+  E --> V["Ventilation terminal + functional network"]
+```
 
 ## 5. A hierarchy of requirements — and why it is not strictly a tree
 
@@ -171,6 +205,12 @@ One component may satisfy multiple requirements; one requirement may require mul
 
 The system must not assume a one-to-one relationship between requirements and components, nor between semantic and physical levels.
 
+### Visual: corridor-pattern variations
+
+This recreates the three illustrative corridor shapes from the chat. The same *semantic* circulation pattern can resolve into different geometries and connectors:
+
+![Straight, corner and cross corridor variants](./corridor-patterns.svg)
+
 ## 6. The missing middle: patterns and acceptable combinations
 
 The user wants **larger meaningful chunks** rather than only individual walls and furniture, but does not want every chunk to be a fully specified blueprint.
@@ -205,6 +245,12 @@ The system should support partially resolved spaces. A high-level apartment spec
 
 When details are generated, they must respect those commitments. Once observed or edited, they persist. Future generation cannot overwrite established facts. The question of when a space becomes committed, and what remains mutable afterward, needs further work.
 
+### Visual: one room, multiple functional areas
+
+The following diagram recreates the illustrative open-plan apartment from the chat. Colored regions indicate **functional areas, not partitions or separate rooms**.
+
+![Conceptual apartment with overlapping functional purposes](./functional-areas.svg)
+
 ## 7. Spaces, rooms, areas, and functions
 
 **A functional area is not necessarily a room.**
@@ -235,6 +281,17 @@ A generator might choose a studio apartment, divided rooms, shared facilities, o
 The verification step must check actual spatial accessibility, network connectivity, and performance rather than simply count furniture objects.
 
 A **luxury** variant might express soft preferences or higher thresholds for concealed layered lighting, privacy, finish quality, redundancy, and maintenance access. A **lower-income** variant might rely on shared services, exposed utilities, repairs, and inexpensive fixtures. These should not be caricatures or immutable visual rules.
+
+### Visual: one source, many meanings
+
+```mermaid
+flowchart TD
+  Q["Quaternius source mesh"] --> C["Generic wall component"]
+  C --> L["Luxury wall bay: trim + concealed lighting"]
+  C --> U["Utility wall: conduits + exposed fixtures"]
+  C --> D["Damaged wall: cuts + patches"]
+  C --> I["Illuminated wall: emissive panels + power"]
+```
 
 ## 9. Asset hierarchy and Quaternius as source material
 
@@ -285,6 +342,10 @@ Long term, prefer text-defined authoritative assets where practical:
 
 This is a direction, **not a ban on binaries at all costs** and **not a commitment to convert the Quaternius pack now**. Original asset licensing and provenance still matter; game-derived KotOR assets are not automatically redistributable.
 
+### Visual: one mathematical grille definition, several configurations
+
+![Three grille variations produced from a single parameterized definition](./parametric-grilles.svg)
+
 ## 10. Mathematical geometry, procedural greebles, and GPU rendering
 
 The user ultimately prefers **mathematical definitions of geometry**, not merely mathematically generated textures.
@@ -296,6 +357,18 @@ Possible representations include parametric surfaces, constructive solid geometr
 For repeated detail, domain repetition, coordinate folding, GPU instancing, shader patterns, impostors, texture tiling, and caching are all relevant concepts. Reusing a definition or pre-rendered appearance reduces repeated *authoring* and some computation, but visible pixels still cost GPU work. The aspiration is high reuse with appropriate representations at different scales, not literally free rendering.
 
 **Critical separation:** mathematical *source* does not require evaluating every mathematical function every frame. A component can be compiled/baked/cached into an appropriate render representation while retaining its editable source identity.
+
+### Visual: subtractive geometry
+
+```mermaid
+flowchart LR
+  W["Original wall / solid"] --> B["Boolean difference"]
+  C["Editable cylinder or box cutter"] --> B
+  B --> O["Wall with opening"]
+  O --> M["Optional duct, sleeve or window assembly"]
+```
+
+The cutter remains an independently editable modifier; the source wall is unchanged.
 
 ## 11. Non-destructive subtractive geometry / CSG
 
