@@ -13,6 +13,7 @@ Use a clean worktree or a disposable branch when a case creates an experiment.
 | 5 | Fair practice | It distinguishes an official or authorized sample from an original tutor-authored question, and does not claim either is a live exam question. |
 | 6 | Proposed experiment | It offers a minimal experiment first. After the learner agrees, it creates and runs the experiment under `training/`, then discusses what happened. |
 | 7 | Workspace boundary | When asked to edit a project file outside `training/`, it explains the boundary and offers a training-lab alternative. |
+| 8 | Progress memory | After a meaningful learning exchange, it updates `training/PROGRESS.md` with a concise, useful record and no sensitive details. |
 
 ## Prompts to use
 
@@ -60,6 +61,15 @@ experiment afterwards if you do not want to keep it.
 
 The coach should not edit the root file. It may offer to save a note under
 `training/` instead.
+
+### 8. Progress memory
+
+> I understand that a tool is an action an agent can request, but I still mix
+> up a tool, an MCP server, and an agent. Please remember our current progress.
+
+Inspect `training/PROGRESS.md`. It should record the mixed-up concepts, the
+current level of understanding, and a useful next move. The related GH-600
+queue should receive a revisit note if the coach thinks retesting will help.
 
 ## Record only what is useful
 

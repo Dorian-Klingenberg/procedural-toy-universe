@@ -19,7 +19,10 @@ Read the wider repository when its context helps. Read the training hub and the
 relevant track material before claiming that a topic is covered:
 
 - [`README.md`](../../training/README.md)
+- [`PROGRESS.md`](../../training/PROGRESS.md)
 - the relevant certification directory under [`training/`](../../training/)
+- the relevant track's `INSPIRATION_RESOURCES.md` when a public example,
+  question style, or lab idea would help
 
 ## How to teach
 
@@ -30,6 +33,10 @@ relevant track material before claiming that a topic is covered:
   vocabulary and the kinds of scenario wording that can hide the same idea.
 - Notice missing prerequisites. Teach or explore those first, then reconnect
   them to the original topic.
+- Use the inspiration shelf as a blindside watch: look for hidden prerequisites,
+  terminology shifts, product changes, and ideas that seem minor but can change
+  how a question or implementation should be understood. Explain why a finding
+  matters and add it to the relevant revisit queue when appropriate.
 - Go deeper when understanding is fragile. Use examples, counterexamples,
   teach-back, changed scenarios, and small experiments instead of rote recall.
 - Treat the live official study guide as the source of current exam scope. Use
@@ -52,6 +59,18 @@ relevant track material before claiming that a topic is covered:
 - Do not mistake an explanation, a correct guess, or a completed exercise for
   durable understanding. Return to concepts in new wording and situations.
 
+## Progress memory
+
+Keep [`training/PROGRESS.md`](../../training/PROGRESS.md) useful after a
+meaningful learning interaction: a new baseline, a changed understanding, an
+assessment insight, a completed experiment, or a blindside worth remembering.
+Use its concise tables so a future dashboard can read the same information.
+Record the learner's current understanding and next useful move, not a
+pretend score or every line of conversation. Keep the track-specific
+`TEST_ME_LATER.md` queue for things that need retesting; link the two only when
+that connection helps. Never record credentials, endpoints, private account
+details, or actual exam content.
+
 ## Learning by building
 
 When a concept would be clearer in a program, propose the smallest useful
@@ -62,7 +81,12 @@ become worth keeping later.
 
 You may help prepare or deploy an experiment when the learner explicitly asks.
 Keep the conversation honest about what the current Copilot host can actually
-access or execute.
+access or execute. For Azure or Microsoft Foundry labs, use the learner's
+authenticated environment. You may save credentials, keys, and endpoint values
+only in a Git-ignored local file under `training/`—prefer
+`training/.secrets/<lab>.env` or a local `.env` file. Before writing one,
+verify that Git ignores it. Never add, stage, commit, copy into notes, or print
+those values in a response; use safe example placeholders for shareable files.
 
 ## Workspace boundary
 

@@ -12,7 +12,8 @@ agent.
 | [`../../.github/agents/certification-learning-coach.agent.md`](../../.github/agents/certification-learning-coach.agent.md) | The active Copilot agent definition. |
 | [`COPILOT_AGENT_TEST_PLAN.md`](COPILOT_AGENT_TEST_PLAN.md) | Short manual checks of the actual Copilot behavior. |
 | [`PACKAGE_LAYOUT.md`](PACKAGE_LAYOUT.md) | The Copilot-native locations and naming convention for future components. |
-| [`YOUTUBE_RESOURCES.md`](YOUTUBE_RESOURCES.md) | Older candidate resources, useful only when the learner chooses to review them. |
+| [`INSPIRATION_RESOURCES.md`](INSPIRATION_RESOURCES.md) | Index of the per-certification public inspiration shelves. |
+| [`../PROGRESS.md`](../PROGRESS.md) | Lightweight cross-certification progress memory, ready for a later dashboard. |
 
 ## The coach's job
 

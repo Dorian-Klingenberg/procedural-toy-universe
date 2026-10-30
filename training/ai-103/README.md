@@ -4,19 +4,24 @@ This directory organizes preparation for [Exam AI-103: Developing AI Apps and Ag
 
 ## Start here
 
-- [AI-103 readiness checklist](READINESS_CHECKLIST.md) — a starter checklist for objective mapping, Azure hands-on evidence, and learning gaps.
 - [Test me later](TEST_ME_LATER.md) — automatically maintained revisit queue for
   confusing wording, prerequisites, and shaky concepts.
-- [Lessons learned](LESSONS_LEARNED.md) — study notes on shared Responsible AI practices and AI-103-specific evidence.
-- [Certification training hub](../README.md) — GH-600-first sequence, shared Responsible AI practices, evidence labels, and cross-track mapping.
+- [Progress memory](../PROGRESS.md) — shared record of understanding,
+  experiments, and useful next moves for a future dashboard.
+- [Inspiration resources](INSPIRATION_RESOURCES.md) — public Azure and Foundry
+  examples, question prompts, and AI-103-specific blindside watch.
+- [Certification training hub](../README.md) — GH-600-first starting point,
+  shared Responsible AI practices, and cross-track connections.
 - [Official AI-103 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103) — authoritative source for current exam objectives.
 
 ## Related tracks
 
-- [GH-600 study companion](../gh-600/README.md), [readiness checklist](../gh-600/REPOSITORY_READINESS.md), and [lessons learned](../gh-600/LESSONS_LEARNED.md)
-- [AI-500 study track](../ai-500/README.md), [readiness checklist](../ai-500/READINESS_CHECKLIST.md), and [lessons learned](../ai-500/LESSONS_LEARNED.md)
+- [GH-600 study companion](../gh-600/README.md)
+- [AI-500 study track](../ai-500/README.md)
 
-Shared Responsible AI principles apply here too, but this track must collect AI-103-specific Azure implementation evidence. GitHub/Markdown design work is useful background and does not substitute for that evidence. The choice of a separate Azure hands-on environment remains open under [Q-012](../../docs/OPEN_QUESTIONS.md).
+Use this track when Azure or Microsoft Foundry application practice makes the
+current concept clearer. Small labs can be created under `training/`; choose a
+specific Azure/Foundry setup only when a real learning question calls for it.
 
 This is a connected learning path, not a locked sequence. The tutor may enter
 from a GH-600 or AI-500 discussion when that produces a clearer foundation.

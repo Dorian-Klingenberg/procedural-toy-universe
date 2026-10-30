@@ -12,9 +12,9 @@ document once is not the same as understanding it.
 
 | Track | What it is for | Starting material | Official guide |
 |---|---|---|---|
-| **GH-600 — default** | Agentic AI development in GitHub and the software-development lifecycle. | [Study companion](gh-600/README.md) and [test-me-later queue](gh-600/TEST_ME_LATER.md) | [GH-600 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-600) |
-| **AI-103** | Developing AI apps and agents on Azure. | [Study track](ai-103/README.md) and [test-me-later queue](ai-103/TEST_ME_LATER.md) | [AI-103 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103) |
-| **AI-500** | Designing and implementing multi-agent AI solutions. | [Study track](ai-500/README.md) and [test-me-later queue](ai-500/TEST_ME_LATER.md) | [AI-500 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-500) |
+| **GH-600 — default** | Agentic AI development in GitHub and the software-development lifecycle. | [Study companion](gh-600/README.md), [inspiration shelf](gh-600/INSPIRATION_RESOURCES.md), and [test-me-later queue](gh-600/TEST_ME_LATER.md) | [GH-600 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-600) |
+| **AI-103** | Developing AI apps and agents on Azure. | [Study track](ai-103/README.md), [inspiration shelf](ai-103/INSPIRATION_RESOURCES.md), and [test-me-later queue](ai-103/TEST_ME_LATER.md) | [AI-103 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103) |
+| **AI-500** | Designing and implementing multi-agent AI solutions. | [Study track](ai-500/README.md), [inspiration shelf](ai-500/INSPIRATION_RESOURCES.md), and [test-me-later queue](ai-500/TEST_ME_LATER.md) | [AI-500 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-500) |
 
 ## How this lab works
 
@@ -24,6 +24,9 @@ document once is not the same as understanding it.
   the clearest way to learn.
 - Let the tutor automatically collect topics to revisit, especially confusing
   wording, shaky prerequisites, and misconceptions.
+- Keep a light [progress memory](PROGRESS.md) of what has been explored,
+  current understanding, experiments, and useful next moves. It is structured
+  for a future dashboard, not a study-completion bureaucracy.
 - Use both relaxed in-conversation questions and occasional mini-assessments.
 - Use official or authorized sample material when available. Tutor-authored
   questions are original practice, not real exam questions.

@@ -8,6 +8,7 @@ native locations and keep the coach's learning work inside `training/`.
 repository/
 ├── training/                                     # the coach's learning lab
 │   ├── README.md
+│   ├── PROGRESS.md                              # shared progress memory
 │   ├── gh-600/
 │   │   └── TEST_ME_LATER.md
 │   ├── ai-103/
@@ -47,9 +48,10 @@ the learning experience easier.
 The active coach may read the whole repository for context. Its notes,
 questions, source material, and exploratory code belong under `training/`.
 The individual certification directories hold their own `TEST_ME_LATER.md`
-queues. An experiment can live wherever under `training/` makes it easy for
-the learner to find and understand; it does not need a prescribed project
-structure.
+queues. `training/PROGRESS.md` keeps the cross-track memory in a small,
+dashboard-friendly format. An experiment can live wherever under `training/`
+makes it easy for the learner to find and understand; it does not need a
+prescribed project structure.
 
 The `.github/` files are installed and maintained by the person creating the
 tutor. A running coach does not need to edit them.
