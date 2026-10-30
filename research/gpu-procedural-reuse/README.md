@@ -30,6 +30,11 @@ The project has roots in the user's childhood interest in classic science-fictio
 
 The distinction between **definition reuse** and **render-result reuse** is the central insight.
 
+
+![Conceptual comparison of full 3D geometry, cached impostors, and repeating baked material tiles](rendering-reuse.svg)
+
+*Original schematic: three ways to display a repeated mechanical detail. It illustrates what is reused, not measured performance.*
+
 ## What each technique reuses
 
 | Technique | Reused resource | GPU work that remains |
