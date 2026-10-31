@@ -31,6 +31,10 @@ document once is not the same as understanding it.
 - Use official or authorized sample material when available. Tutor-authored
   questions are original practice, not real exam questions.
 
+The tutor is the Certification Learning Coach, maintained in its own
+[repository](https://github.com/TimmyTheTurtle/certification-learning-coach).
+Follow its install instructions to use it with this lab.
+
 The track documents are useful starting points, not a contract that forces a
 particular study order or an evidence bureaucracy. Keep what helps; revise the
 learning path as understanding grows.

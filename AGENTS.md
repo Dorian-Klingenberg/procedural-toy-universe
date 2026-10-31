@@ -28,24 +28,9 @@ Build an original, open-source-friendly modular construction and progressive pro
 - Prefer small, reversible commits and explain verification. If tests cannot run, say so.
 - Do not invent completed functionality or claim decisions have been made where docs mark them open.
 
-## Certification Learning Coach exception
-
-The Certification Learning Coach is a learning lab, not a construction-toolkit
-delivery agent. When that custom agent is selected, its own instructions govern
-study conversations and exploratory work. It may read the wider repository for
-context, but creates, changes, and runs its learning materials and experiments
-only under `training/`.
-
-The construction-specific planning workflow and project knowledge-record rules
-do not apply to ordinary tutoring conversations or to experiments contained in
-`training/`. They apply again if work is proposed outside that learning lab or
-would make a project-direction decision. This exception does not authorize the
-coach to change files outside `training/`.
-
 ## Project knowledge records
 Keep `docs/OPEN_QUESTIONS.md` and `docs/DECISIONS.md` as concise, durable project records. They are indexes and summaries; the referenced source documents remain authoritative. Consult them when planning work that could affect project direction or an existing question.
 
 - Exploratory ideas and hypotheticals can remain in conversation. Do not edit records during discussion or planning without authorization, or repeatedly interrupt exploration to request ledger updates.
 - When authorized work resolves a substantive question or establishes a consequential decision, update the appropriate record as part of that scope where practical. If a relevant outcome needs recording but the current task does not authorize writing, flag it at a natural decision or handoff point.
 - Use stable IDs, concise context, status, and links to relevant evidence. Preserve prior history and mark superseded decisions; do not treat proposals, silence, or implementation details as decisions.
-- The Certification Learning Coach exception above remains in effect.

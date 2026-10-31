@@ -71,10 +71,10 @@ This is the durable record of consequential project decisions and the important 
 ### D-009 — Make the Certification Learning Coach a free-form Copilot learning lab
 
 - **Date:** 2026-10-29
-- **Status:** Accepted
+- **Status:** Accepted; its location in this repository is superseded by [D-012](#d-012--move-the-certification-learning-coach-to-its-own-repository)
 - **Decision:** The Certification Learning Coach is a GitHub Copilot-oriented tutor that reads repository context, works only under `training/`, and teaches through conversation, fair practice, automatic track-specific revisit queues, and learner-approved exploratory programs. GH-600 is the default path; AI-103 and AI-500 are brought in when they provide useful prerequisites or deeper understanding, with AI-500 intentionally used for software-engineering and multi-agent depth. The coach proposes an experiment before building it, then may run it and help deploy it when the learner explicitly asks.
 - **Context and rationale:** The owner wants discovery and real understanding rather than a fixed curriculum, rote memorization, or an evidence/approval bureaucracy. The coaching focus includes recognizing unfamiliar assessment wording, exposing prerequisites, revisiting misconceptions, and learning by making simple proof-of-concept programs.
-- **References:** User-approved coaching discussion on 2026-10-29; [coach definition](../.github/agents/certification-learning-coach.agent.md); [training hub](../training/README.md); [component layout](../training/coach-agent-development/PACKAGE_LAYOUT.md).
+- **References:** User-approved coaching discussion on 2026-10-29; [coach definition](https://github.com/TimmyTheTurtle/certification-learning-coach/blob/main/agents/certification-learning-coach.agent.md) (originally `.github/agents/certification-learning-coach.agent.md`); [training hub](../training/README.md); [component layout](https://github.com/TimmyTheTurtle/certification-learning-coach/blob/main/docs/COMPONENT_LAYOUT.md) (originally `training/coach-agent-development/PACKAGE_LAYOUT.md`).
 
 ### D-010 — Add Ada as an optional project engineering partner
 
@@ -91,6 +91,14 @@ This is the durable record of consequential project decisions and the important 
 - **Decision:** Keep the project question and decision ledgers, while allowing exploratory conversations to remain conversational and read-only. Consult relevant records for substantive planning and update them during authorized work when a substantive outcome warrants it. Make full project bootstrap an optional, requested orientation; preserve project invariants and approval boundaries. This supersedes the mandatory per-conversation scope and timing in D-001, not the existence of the records.
 - **Context and rationale:** The user requested friction-free exploration, targeted context, and autonomous execution within an approved phase, without repeated ledger prompts or mandatory full onboarding at every session.
 - **References:** User-approved instruction revision; [`AGENTS.md`](../AGENTS.md); [optional orientation](AGENT_BOOTSTRAP.md); [D-001](#d-001--maintain-project-questions-and-decisions-in-repository-documentation).
+
+### D-012 — Move the Certification Learning Coach to its own repository
+
+- **Date:** 2026-10-30
+- **Status:** Accepted
+- **Decision:** Move the Certification Learning Coach's agent definition, development notes, and a blank `training/` template into the public [`TimmyTheTurtle/certification-learning-coach`](https://github.com/TimmyTheTurtle/certification-learning-coach) repository, with install instructions, and remove the agent, its development folder, and the `AGENTS.md` coach exception from this repository. The study content under `training/` stays here.
+- **Context and rationale:** The user wants the coach installable in any project, following the same pattern as Ada's central repository. The coach's behavior described in D-009 is unchanged.
+- **References:** User approval on 2026-10-30; [coach repository](https://github.com/TimmyTheTurtle/certification-learning-coach); [D-009](#d-009--make-the-certification-learning-coach-a-free-form-copilot-learning-lab).
 
 ## Updating this record
 
