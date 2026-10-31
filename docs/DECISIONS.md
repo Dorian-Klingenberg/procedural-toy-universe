@@ -7,7 +7,7 @@ This is the durable record of consequential project decisions and the important 
 ### D-001 — Maintain project questions and decisions in repository documentation
 
 - **Date:** 2026-10-26
-- **Status:** Accepted
+- **Status:** Superseded in applicability and timing by D-011; durable project records remain in use.
 - **Decision:** Maintain substantive open questions, priorities, and concise answers in [`OPEN_QUESTIONS.md`](OPEN_QUESTIONS.md), and maintain consequential decisions and summaries of materially relevant discussions in this file. Require all agents to consult and update these records through repository-wide instructions in `AGENTS.md` and the startup workflow. A skill may provide extra procedure later, but is not required for this behavior.
 - **Context and rationale:** The user wants a persistent, prioritized question-and-answer ledger and a record of important conversations and their outcomes, maintained across agents and sessions. Durable tracked files plus always-on repository instructions are the chosen mechanism; full chat transcripts and routine exchanges are not needed.
 - **References:** User-approved discussion on 2026-10-26; [`AGENTS.md`](../AGENTS.md); [`AGENT_BOOTSTRAP.md`](AGENT_BOOTSTRAP.md).
@@ -83,6 +83,14 @@ This is the durable record of consequential project decisions and the important 
 - **Decision:** Add Ada as a selectable GitHub Copilot engineering partner and include her manually invoked engineering-method reference library in this repository. The project copy uses repository skill references, with personal references as a fallback. Existing project instructions and the Certification Learning Coach remain applicable.
 - **Context and rationale:** The user approved making Ada available in the Procedural Toy Universe checkout for collaborative discovery, design, and detailed implementation handoffs. The project copy can evolve independently and does not automatically synchronize with Ada's central repository.
 - **References:** [Ada profile](../.github/agents/ada.agent.md); [engineering-method skill](../.github/skills/engineering-method/SKILL.md); [central Ada repository](https://github.com/TimmyTheTurtle/engineering-partner).
+
+### D-011 — Use a lightweight, task-aware project workflow
+
+- **Date:** 2026-10-30
+- **Status:** Accepted
+- **Decision:** Keep the project question and decision ledgers, while allowing exploratory conversations to remain conversational and read-only. Consult relevant records for substantive planning and update them during authorized work when a substantive outcome warrants it. Make full project bootstrap an optional, requested orientation; preserve project invariants and approval boundaries. This supersedes the mandatory per-conversation scope and timing in D-001, not the existence of the records.
+- **Context and rationale:** The user requested friction-free exploration, targeted context, and autonomous execution within an approved phase, without repeated ledger prompts or mandatory full onboarding at every session.
+- **References:** User-approved instruction revision; [`AGENTS.md`](../AGENTS.md); [optional orientation](AGENT_BOOTSTRAP.md); [D-001](#d-001--maintain-project-questions-and-decisions-in-repository-documentation).
 
 ## Updating this record
 
