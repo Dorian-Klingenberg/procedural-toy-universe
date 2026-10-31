@@ -76,6 +76,14 @@ This is the durable record of consequential project decisions and the important 
 - **Context and rationale:** The owner wants discovery and real understanding rather than a fixed curriculum, rote memorization, or an evidence/approval bureaucracy. The coaching focus includes recognizing unfamiliar assessment wording, exposing prerequisites, revisiting misconceptions, and learning by making simple proof-of-concept programs.
 - **References:** User-approved coaching discussion on 2026-10-29; [coach definition](../.github/agents/certification-learning-coach.agent.md); [training hub](../training/README.md); [component layout](../training/coach-agent-development/PACKAGE_LAYOUT.md).
 
+### D-010 — Add Ada as an optional project engineering partner
+
+- **Date:** 2026-10-30
+- **Status:** Accepted
+- **Decision:** Add Ada as a selectable GitHub Copilot engineering partner and include her manually invoked engineering-method reference library in this repository. The project copy uses repository skill references, with personal references as a fallback. Existing project instructions and the Certification Learning Coach remain applicable.
+- **Context and rationale:** The user approved making Ada available in the Procedural Toy Universe checkout for collaborative discovery, design, and detailed implementation handoffs. The project copy can evolve independently and does not automatically synchronize with Ada's central repository.
+- **References:** [Ada profile](../.github/agents/ada.agent.md); [engineering-method skill](../.github/skills/engineering-method/SKILL.md); [central Ada repository](https://github.com/TimmyTheTurtle/engineering-partner).
+
 ## Updating this record
 
 - Give each consequential decision a stable `D-NNN` ID; do not reuse IDs.

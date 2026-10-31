@@ -23,6 +23,8 @@ Read [docs/VISION.md](docs/VISION.md), [docs/ARCHITECTURE.md](docs/ARCHITECTURE.
 ## Agent onboarding
 Read [AGENTS.md](AGENTS.md). Copilot can use the `/initialize` skill from [`.github/skills/initialize/SKILL.md`](.github/skills/initialize/SKILL.md) where repository skills are supported. Codex should read `AGENTS.md` and may use the `initialize` skill under `.agents/skills/initialize/` where skills are supported. Both use the same instructions and project docs.
 
+In the Copilot harness, select [Ada](.github/agents/ada.agent.md) for collaborative engineering discovery, planning, design, and implementation handoffs. Her [engineering-method skill](.github/skills/engineering-method/SKILL.md) is manually invoked; it does not automatically apply to other agents. This project copy does not automatically update from [Ada's central repository](https://github.com/TimmyTheTurtle/engineering-partner).
+
 ## Learning resources
 - [Certification training hub](training/README.md) — GH-600, AI-103, and AI-500 study tracks with shared Responsible AI practices.
 
