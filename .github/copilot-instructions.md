@@ -1,5 +1,3 @@
 # Copilot repository instructions
 
-Follow ../AGENTS.md (repository root) as the shared authority for all agents. Read docs/AGENT_BOOTSTRAP.md, docs/VISION.md, docs/ARCHITECTURE.md, docs/ROADMAP.md, and docs/ASSET_POLICY.md before making changes.
-
-Keep tasks scoped and reversible. Ask before choosing an implementation stack, license, or importing third-party assets. Preserve fixed physical volumes, persistent observations, optional snapping, and blueprint connector interfaces. Do not introduce franchise-owned media.
+Follow the repository-root `AGENTS.md` for shared project invariants, collaboration and approval boundaries. Consult project documents as relevant to the task. Full orientation via `docs/AGENT_BOOTSTRAP.md` or `/initialize` is optional and on request.

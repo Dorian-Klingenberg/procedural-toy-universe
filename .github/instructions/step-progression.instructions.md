@@ -1,6 +1,6 @@
 ---
-description: Language- and toolchain-agnostic rules for preserving numbered steps in step-based learning sandboxes.
-applyTo: 'sandboxes/**'
+description: Use when creating, changing, or advancing numbered steps in a step-based learning sandbox; preserve completed steps as reproducible artifacts.
+applyTo: 'sandboxes/**/step-*/**,sandboxes/**/*_step*'
 ---
 
 # Step-Based Learning Sandbox Progression Rules
@@ -8,6 +8,8 @@ applyTo: 'sandboxes/**'
 ## Scope
 
 Use these rules for any learning sandbox under `sandboxes/` that teaches or explores a topic through numbered steps, regardless of programming language, framework, or build system. Adapt the examples and artifact layout to the sandbox's conventions.
+
+When advancing an active file outside these path patterns, consult this instruction explicitly if the sandbox uses numbered steps. These rules do not apply to an ordinary unnumbered sandbox merely because it is under `sandboxes/`.
 
 ## The rule
 

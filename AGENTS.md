@@ -5,13 +5,12 @@ Applies repository-wide to Codex, Copilot, and other coding agents.
 ## Mission
 Build an original, open-source-friendly modular construction and progressive procedural discovery toolkit. Follow `docs/VISION.md` and `docs/ARCHITECTURE.md`. Treat examples from existing franchises and games as conceptual references only.
 
-## Before working
-1. Read `README.md`, `docs/VISION.md`, `docs/ARCHITECTURE.md`, `docs/ROADMAP.md`, and `docs/ASSET_POLICY.md`.
-2. Read `docs/OPEN_QUESTIONS.md` and `docs/DECISIONS.md` before planning work that could affect project direction or answer an open question.
-3. Inspect the repository and relevant tests before suggesting changes.
-4. State the goal, assumptions, constraints, and smallest verifiable increment.
-5. Ask before choosing an engine, language, license, major dependency, or importing external assets.
-6. Prefer an issue and focused PR over broad changes; do not merge without explicit approval.
+## Working together
+- **Questions and exploration:** Discuss ideas naturally. Read project sources when they are relevant, and distinguish established facts from proposals. Discussion alone does not authorize edits or turn possibilities into decisions.
+- **Substantial planning:** Inspect the relevant code, tests, project documents, and, when project direction or an existing question is affected, `docs/OPEN_QUESTIONS.md` and `docs/DECISIONS.md`. Discuss the goal, assumptions, constraints, and a small phased plan before implementation.
+- **Approved work:** Once the user approves a plan or explicitly authorizes a phase, work autonomously within that scope. Report coherent increments, verification, and what remains; do not ask about routine files, searches, imports, or tests.
+- Ask before choosing an engine, language, or license; adding, installing, upgrading, or importing a new third-party dependency; or importing external assets. Prefer established dependencies and standard-library solutions. Do not incidentally change manifests or lockfiles. Prefer a focused PR; merge only when explicitly authorized.
+- For a full project orientation, use the optional `/initialize` skill or follow `docs/AGENT_BOOTSTRAP.md` on request. Do not require the full bootstrap for every conversation.
 
 ## Invariants
 - Never place generated geometry outside a fixed hull/structure volume.
@@ -43,15 +42,10 @@ do not apply to ordinary tutoring conversations or to experiments contained in
 would make a project-direction decision. This exception does not authorize the
 coach to change files outside `training/`.
 
-## Project knowledge records — required
-Keep `docs/OPEN_QUESTIONS.md` and `docs/DECISIONS.md` as the durable, concise project records. These requirements apply to every agent and substantive project conversation, except for ordinary Certification Learning Coach work as described in the exception above; they are not optional and do not depend on a skill being available.
+## Project knowledge records
+Keep `docs/OPEN_QUESTIONS.md` and `docs/DECISIONS.md` as concise, durable project records. They are indexes and summaries; the referenced source documents remain authoritative. Consult them when planning work that could affect project direction or an existing question.
 
-- Before planning, consult the records and relevant source documents. Treat the records as indexes and summaries; the referenced source documents remain authoritative for their subject matter.
-- Add substantive unanswered project questions to `docs/OPEN_QUESTIONS.md`, with a stable ID, concise wording, priority, status, and source/context. Update priority or status when circumstances change. When answered, record the concise answer and link the related decision or evidence; do not leave resolved items marked open.
-- When a user or authorized project discussion makes a consequential decision, add it to `docs/DECISIONS.md` with a stable ID, date, decision, concise context/rationale, and references. Summarize important conversations only when they materially shaped a decision; do not copy full transcripts or record routine chat.
-- Make these updates in the same change as the work or decision where practical. If a decision is explicitly deferred, record or update the corresponding open question instead of presenting it as settled.
-- Never infer a decision from a proposal, suggestion, implementation detail, or silence. Ask for clarification where needed, and correct the records if they become inaccurate.
-- Keep entries concise, link related records and source documents, and preserve history when updating an entry. Do not delete a resolved question merely to keep the open list short.
-
-## Startup workflow
-Follow `docs/AGENT_BOOTSTRAP.md`. At the start of a session, produce a concise status report and proposed next action; do not automatically implement it.
+- Exploratory ideas and hypotheticals can remain in conversation. Do not edit records during discussion or planning without authorization, or repeatedly interrupt exploration to request ledger updates.
+- When authorized work resolves a substantive question or establishes a consequential decision, update the appropriate record as part of that scope where practical. If a relevant outcome needs recording but the current task does not authorize writing, flag it at a natural decision or handoff point.
+- Use stable IDs, concise context, status, and links to relevant evidence. Preserve prior history and mark superseded decisions; do not treat proposals, silence, or implementation details as decisions.
+- The Certification Learning Coach exception above remains in effect.
