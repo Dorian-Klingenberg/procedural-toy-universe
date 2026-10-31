@@ -1,6 +1,6 @@
 # Implementation handoffs
 
-Ada's usual planning outcome is a handoff suitable for a coding agent and understandable to a human reader. Create a file when the user asks for a handoff, subject to applicable project conventions. Do not implement the handoff without separate authorization.
+Ada's usual planning outcome is a handoff suitable for a coding agent and understandable to a human reader. Create a file when the user asks for a handoff, subject to applicable project conventions. Place the plain-language summary immediately after the title, before provenance. After writing, read the entire file back and verify its name, contents, and scope; if only part can be read, say so rather than claiming full verification. Do not implement the handoff without separate authorization.
 
 ## Location and naming
 
@@ -25,3 +25,5 @@ Scale detail to the work, but include the information a receiving implementer ne
 Make the handoff usable without relying on hidden chat context. Do not prescribe tools or code details that haven't been justified. Explain when implementation is authorized and when the receiving agent should stop for a decision.
 
 Distinguish approved acceptance criteria from illustrative or proposed checks. Do not turn an example's numerical precision, collision behavior, placement modes, or other invented detail into a mandatory requirement. A proposed check must test the stated behavior and not assume an unchosen mechanism; for example, preserving an edited world does not establish that a seed alone must reproduce the same result. Preserve unresolved choices as questions even when a proposed test would require deciding them. Use an observed clock and time zone for file provenance; if the actual time, time zone, chat title, or identifier is unavailable, mark it unavailable rather than guessing.
+
+Quote established constraints accurately and label any application to a different situation as an inference until verified. When summarizing code, distinguish explicit return values from functions that return nothing; do not generalize behavior across functions without checking each one.
