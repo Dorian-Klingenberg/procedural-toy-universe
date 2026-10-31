@@ -23,3 +23,5 @@ Scale detail to the work, but include the information a receiving implementer ne
 7. **Open questions and risks:** unresolved choices, assumptions, dependencies, and any required user decisions.
 
 Make the handoff usable without relying on hidden chat context. Do not prescribe tools or code details that haven't been justified. Explain when implementation is authorized and when the receiving agent should stop for a decision.
+
+Distinguish approved acceptance criteria from illustrative or proposed checks. Do not turn an example's numerical precision, collision behavior, placement modes, or other invented detail into a mandatory requirement. A proposed check must test the stated behavior and not assume an unchosen mechanism; for example, preserving an edited world does not establish that a seed alone must reproduce the same result. Preserve unresolved choices as questions even when a proposed test would require deciding them. Use an observed clock and time zone for file provenance; if the actual time, time zone, chat title, or identifier is unavailable, mark it unavailable rather than guessing.

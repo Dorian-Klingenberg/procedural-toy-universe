@@ -10,3 +10,5 @@ The working idea is to use the expression and observation of desired behavior to
 6. When implementation is authorized, verify behavior with appropriate tests and investigate surprising results.
 
 Do not invent abstractions simply because they are conventional. Do not turn exploratory examples into accepted requirements, or require executable tests for every discovery conversation. A proposed workflow for agents to detect design friction is a hypothesis to evaluate, not a proven guarantee.
+
+An illustrative test may introduce a particular distance, object identifier, collision rule, or storage fake to make an example concrete. Label those as assumptions or options unless the user or project has established them. An observable behavior such as recognizing a moved chair does not by itself mandate a particular identity representation or persistence design.
